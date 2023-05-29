@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Find Lost Document</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+     <!-- Bootstrap Icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+     <div class="fluid-container">
+
+          <div class="row top-row">
+               <div class="col header left-header">
+                    <h1><a href="index.html">Docment Finder Nepal</a></h1>
+               </div>
+               <div class="col header right-header">
+                    <i class="bi bi-list" id="menu-icon" onclick="toggleMenu()"></i>
+                    <div class="modes">
+                         <span>नेपाली</span>
+                         <i class="bi bi-brightness-high"></i>
+                         <!-- <i class="bi bi-moon"></i> -->
+                    </div>
+               </div>
+          </div>
+
+          <div class="row bottom-row">
+               <div class="col left-col" id="main-menu">
+                    <div class="navigation-box">
+                         <div class="nav-box">
+                              <h2>Generate Ticket</h2>
+                              <hr>
+                              <li><a href="lostdocument.html">I lost Document</a></li>
+                              <li><a href="founddocument.html">I found Document</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Generated Tickets</h2>
+                              <hr>
+                              <li><a href="">View unsolved tickets</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Solved Tickets</h2>
+                              <hr>
+                              <li><a href="">View solved tickets</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Appreciation</h2>
+                              <hr>
+                              <li><a href="">Great beings</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Learn</h2>
+                              <hr>
+                              <li><a href="">How it works</a></li>
+                              <li><a href="">Privacy Policy</a></li>
+                              <li><a href="">About Us</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Feedback</h2>
+                              <hr>
+                              <li><a href="">Provide Feedback</a></li>
+                         </div>
+                    </div>
+               </div>
+               <div class="col right-col d-flex justify-content-center align-items-center" id="right-col">
+                    <div id="cover"></div>
+                    <div class="welcome ">
+                         <p class="text-center">“Namaste and Welcome! Please navigate<br>
+                              to the necessary section as per<br>
+                              your requirement.”</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     </div>
+
+
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"></script>
+
+     <!-- Custom JS -->
+     <script src="script.js"></script>
+
+</body>
+
+</html>
