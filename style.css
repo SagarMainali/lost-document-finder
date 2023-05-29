@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+     --c1: #3B4874;
+     --c2: #5b6ba1;
+     --c3: #413C3C;
+}
+
+* {
+     font-family: 'Poppins', sans-serif;
+     user-select: none;
+     padding: 0 !important;
+     margin: 0 !important;
+}
+
+body {
+     display: flex;
+     justify-content: center;
+}
+
+.fluid-container {
+     height: 100vh;
+     width: 100vw;
+     max-width: 1920px;
+     max-height: 1080px;
+}
+
+.row {
+     color: white;
+     width: 100%;
+}
+
+.top-row {
+     height: 10%;
+     background-image: linear-gradient(var(--c1), var(--c2));
+     position: sticky !important;
+     top: 0;
+     z-index: 100;
+     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.25);
+}
+
+.col {
+     height: 100%;
+}
+
+.header {
+     display: flex;
+     align-items: center;
+}
+
+.left-header {
+     justify-content: center;
+     max-width: 270px;
+     /* box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.25); */
+     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+     font-size: 16px;
+     letter-spacing: 0.6px;
+     display: inline;
+}
+
+.right-header {
+     justify-content: space-between;
+     padding-right: 20px !important;
+}
+
+#menu-icon {
+     font-size: 22px;
+     margin-left: 30px !important;
+}
+
+i {
+     cursor: pointer;
+}
+
+.modes>* {
+     margin-right: 30px !important;
+     cursor: pointer;
+}
+
+.left-col {
+     /* position: relative; */
+     z-index: 99;
+     box-shadow: 8px 0px 20px 2px rgba(0, 0, 0, 0.25);
+     max-width: 270px;
+     transition: 0.3s;
+}
+
+.bottom-row {
+     height: 90%;
+     position: relative;
+}
+
+.navigation-box {
+     /* height: 100%; */
+     padding-top: 30px !important;
+     background-color: var(--c2);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     /* justify-content: start; */
+}
+
+.nav-box {
+     margin-bottom: 30px !important;
+     text-align: center;
+}
+
+h2 {
+     font-size: 16px;
+     letter-spacing: 0.5px;
+     font-weight: bold;
+}
+
+hr {
+     margin: 8px 0 !important;
+     background-color: white;
+     height: 2px;
+     border: 0;
+}
+
+a {
+     text-decoration: none;
+     color: white;
+     font-size: 16px;
+}
+
+li {
+     list-style: none;
+     margin-bottom: 8px !important;
+     transition: 0.3s;
+}
+
+li:hover {
+     transform: translate(4px);
+}
+
+.active {
+     font-size: 14px;
+}
+
+.right-col {
+     color: gray;
+     background-color: white;
+     padding: 0 20px !important;
+}
+
+p {
+     color: var(--c3);
+     letter-spacing: 0.2px;
+}
+
+#cover {
+     display: none;
+}
+
+.left-col-slide-lg {
+     position: absolute;
+     transform: translateX(-270px);
+     visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+
+     .right-col {
+          position: absolute;
+     }
+
+     .left-header {
+          max-width: 240px;
+     }
+
+     .left-col {
+          max-width: 240px;
+          transform: translateX(-250px);
+     }
+
+     .left-col-slide-sm {
+          visibility: visible;
+          transform: translateX(0px);
+     }
+
+     .cover-add {
+          display: block !important;
+          position: absolute;
+          inset: 0;
+          height: 1080px;
+          background-color: var(--c3);
+          z-index: 50;
+          opacity: 0.6;
+     }
+
+     .right-col-overflow {
+          overflow: hidden !important;
+     }
+
+}
+
+@media screen and (max-width: 570px) {
+
+     .inlines {
+          display: block !important;
+     }
+
+     input {
+          width: 100% !important;
+          margin-bottom: 12px !important;
+     }
+
+     /* .dates input {
+          width: 100% !important;
+     } */
+
+     .img-upload-btn {
+          width: 50%;
+     }
+}
+
+
+/* form page */
+
+
+form {
+     max-width: 556px;
+     padding: 30px 0 !important;
+}
+
+h3 {
+     text-transform: uppercase;
+     font-size: 14px;
+     font-weight: bold;
+     margin-bottom: 10px !important;
+}
+
+.form-type-name {
+     text-align: center;
+     margin-bottom: 30px !important;
+     font-size: 16px;
+     letter-spacing: 0.5px;
+     word-spacing: 5px;
+}
+
+b {
+     color: var(--c1);
+}
+
+.form-section {
+     margin-bottom: 20px !important;
+     width: 100% !important;
+}
+
+.inlines {
+     width: 100% !important;
+     display: flex;
+     justify-content: space-between;
+}
+
+input,
+select,
+.img-upload-btn {
+     margin-bottom: 12px !important;
+     width: 49%;
+     padding: 10px 15px !important;
+     font-size: 14px;
+     border-radius: 6px;
+     border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.dates input {
+     width: 49%;
+}
+
+select:required:invalid {
+     color: gray;
+}
+
+option {
+     color: black;
+}
+
+#email,
+#document-type,
+#document-issued-district,
+#do-fn {
+     display: block !important;
+     width: 100% !important;
+}
+
+.note {
+     font-size: 12px;
+     font-style: italic;
+     color: gray;
+}
+
+/* #email {
+     margin-top: 12px !important;
+}
+
+#document-type {
+     margin-bottom: 12px !important;
+} */
+
+textarea {
+     resize: none;
+     width: 100%;
+     border-radius: 6px;
+     padding: 10px 15px !important;
+     border: 1px solid rgba(128, 128, 128, 0.3);
+     font-size: 14px;
+}
+
+button {
+     display: block;
+     background-color: var(--c2);
+     padding: 8px 35px !important;
+     color: white;
+     border-radius: 6px;
+     letter-spacing: 0.6px;
+     border: 0;
+     font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+     background-color: rgb(249, 249, 249);
+     outline: 0;
+     border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+*::placeholder {
+     font-size: 13px;
+     letter-spacing: .4px;
+}
+
+/* Hide scrollbar for Chrome, Safari, Opera and Brave */
+.left-col::-webkit-scrollbar,
+.right-col::-webkit-scrollbar {
+     display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.left-col,
+.right-col {
+     overflow: scroll;
+     -ms-overflow-style: none;
+     /* IE and Edge */
+     scrollbar-width: none;
+     /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+}
+
+/* Firefox */
+/* input[type=number] {
+     -moz-appearance: textfield;
+} */
+
+#document-photo {
+     border: 0;
+}
+
+.img-upload-btn {
+     font-size: 13px;
+     letter-spacing: 0.4px;
+     color: gray;
+     cursor: pointer;
+}
+
+.img-upload-btn i {
+     margin-right: 10px !important;
+     font-size: 17px;
+}
