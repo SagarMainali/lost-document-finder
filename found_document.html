@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Find Lost Document</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+     <!-- Bootstrap Icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- flatpickr.js -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+
+     <div class="fluid-container">
+
+          <div class="row top-row">
+               <div class="col header left-header">
+                    <h1><a href="index.html">Docment Finder Nepal</a></h1>
+               </div>
+               <div class="col header right-header">
+                    <i class="bi bi-list" id="menu-icon" onclick="toggleMenu()"></i>
+                    <div class="modes">
+                         <span>नेपाली</span>
+                         <i class="bi bi-brightness-high"></i>
+                         <!-- <i class="bi bi-moon"></i> -->
+                    </div>
+               </div>
+          </div>
+
+          <div class="row bottom-row">
+               <div class="col left-col" id="main-menu">
+                    <div class="navigation-box">
+                         <div class="nav-box">
+                              <h2>Generate Ticket</h2>
+                              <hr>
+                              <li><a href="lostdocument.html">I lost
+                                        Document</a></li>
+                              <li><a href="founddocument.html"><i class="bi bi-caret-right-fill active"></i> I found
+                                        Document</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Generated Tickets</h2>
+                              <hr>
+                              <li><a href="">View unsolved tickets</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Solved Tickets</h2>
+                              <hr>
+                              <li><a href="">View solved tickets</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Appreciation</h2>
+                              <hr>
+                              <li><a href="">Great beings</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Learn</h2>
+                              <hr>
+                              <li><a href="">How it works</a></li>
+                              <li><a href="">Privacy Policy</a></li>
+                              <li><a href="">About Us</a></li>
+                         </div>
+                         <div class="nav-box">
+                              <h2>Feedback</h2>
+                              <hr>
+                              <li><a href="">Provide Feedback</a></li>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="col right-col" id="right-col">
+                    <div id="cover"></div>
+                    <form class="ld-form mx-auto" action="">
+                         <h3 class="form-type-name">Document <b>"Finder"</b> Form</h3>
+                         <div class="form-section">
+                              <h3>Personal</h3>
+                              <div class="inlines">
+                                   <input type="text" id="full-name" name="full-name" placeholder="Full Name" required
+                                        maxlength="25">
+                                   <input type="number" id="phone" name="phone" placeholder="Phone" required
+                                        oninput="this.value = this.value.slice(0,this.maxLength)" maxlength="10">
+                              </div>
+                              <input type="email" id="email" name="email" placeholder="Email" required maxlength="50">
+                              <p class="note">*Please enter correct email since you will be notified in this email after
+                                   the ticket matches.</p>
+                         </div>
+                         <div class="form-section">
+                              <h3>Address</h3>
+                              <div class="inlines">
+                                   <input type="text" id="current-address" name="current-address"
+                                        placeholder="Current Address" required maxlength="50">
+                                   <input type="text" id="permanent-address" name="permanent-address"
+                                        placeholder="Permanent Address" required maxlength="50">
+                              </div>
+                         </div>
+                         <div class="form-section">
+                              <h3>Document</h3>
+                              <select id="document-type" name="document-type" required>
+                                   <option value="" class="default-sv" selected disabled hidden>Select Document Type
+                                   </option>
+                                   <option value="Citizenship">Citizenship</option>
+                                   <option value="Passport">Passport</option>
+                                   <option value="License">License</option>
+                              </select>
+                              <input type="text" id="do-fn" name="full-name" placeholder="Owner Full Name in Document"
+                                   required maxlength="25">
+                              <input type="text" id="document-issued-district" name="document-issued-district"
+                                   placeholder="Document Issued District" required maxlength="30">
+                              <div class="inlines dates">
+                                   <input type="datetime-local" id='issued-date' name='issued-date'
+                                        placeholder="Issued Date" required>
+                                   <input type="datetime-local" id='expiry-date' name='expiry-date'
+                                        placeholder="Expiry Date" required>
+                              </div>
+                              <div class="inlines">
+                                   <div class="inlines">
+                                        <input type="text" id="document-id" name="document-id" placeholder="Document ID"
+                                             required maxlength="30">
+                                        <input type="file" accept="image/*" id="choose-document-photo" hidden required>
+                                        <label class="img-upload-btn" for="choose-document-photo"><i
+                                                  class="bi bi-card-image"></i><span id="img-name">Document
+                                                  Photo</span></label>
+
+                                   </div>
+                              </div>
+                              <div class="form-section">
+                                   <h3>Description</h3>
+                                   <textarea maxlength="150" name="description" id="description"
+                                        placeholder="Write your message to display" rows="2"></textarea>
+                              </div>
+                              <button>Submit</button>
+                    </form>
+               </div>
+          </div>
+     </div>
+
+     </div>
+
+     <!-- Custom JS -->
+     <script src="script.js"></script>
+
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"></script>
+
+     <!-- flatpickr.js -->
+     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+     <script>
+          flatpickr("input[type=datetime-local]", {
+               altInput: true,
+               altFormat: "F j, Y - h:i K",
+               dateFormat: "Y-m-d - h:i K",
+          });
+     </script>
+
+</body>
+
+</html>
